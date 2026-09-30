@@ -4,11 +4,11 @@
    "_id": "SAJDZ1FE0KCK62491",
    "body": "Coupe",
    "city": "Phoenix",
-   "color": "Blue (black interior)",
+   "color": "Blue",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 16000,
-   "notes": "Autotrader Private Seller Exchange; 133 days on site.",
+   "notes": "KBB private; 133 days on site; price unchanged",
    "price": 79000,
    "priceHistory": [
     {
@@ -16,12 +16,12 @@
      "p": 79000
     }
    ],
-   "seller": "Private Seller Exchange (private party)",
+   "seller": "Jake C (Private Seller Exchange)",
    "seller_type": "private",
-   "source": "KBB/Autotrader",
+   "source": "KBB",
    "sources": [
     {
-     "name": "KBB/Autotrader",
+     "name": "KBB",
      "url": "https://www.kbb.com/cars-for-sale/vehicle/780856335"
     }
    ],
@@ -35,12 +35,12 @@
    "_id": "SAJDZ1FE2KCK62248",
    "body": "Coupe",
    "city": "Houston",
-   "color": "White (black interior)",
+   "color": "White",
    "firstSeen": "2026-09-30",
-   "flag": "Salvage history",
+   "flag": "Salvage history: IAAI lot 39420400 sold 2024-06-25, L/R side damage, $15,825 at 37,641 mi (bid.cars/bidfax/bidspace)",
    "lastSeen": "2026-09-30",
    "miles": 41356,
-   "notes": "Sold at insurance salvage auction in 2024 (side/underbody damage), color changed since. Also CarGurus ($55,194, stock 62248), Autolist, iSeeCars, CarStory. Cars.com labels body inconsistently; VIN (DZ1) = coupe.",
+   "notes": "CarStory 54995, 19 days available; Autolist/iSeeCars show 55194 (fee-inclusive); not on KBB",
    "price": 54995,
    "priceHistory": [
     {
@@ -50,20 +50,24 @@
    ],
    "seller": "Houston Auto World",
    "seller_type": "dealer",
-   "source": "Cars.com",
+   "source": "CarStory",
    "sources": [
     {
-     "name": "Cars.com",
+     "name": "cars.com / caredge",
      "url": "https://www.cars.com/vehicledetail/1f93bf3f-eacb-46c5-b8eb-8243c3056e91/"
     },
     {
      "name": "CarStory / Autolist / classic.com",
      "url": "https://www.autolist.com/jaguar-f+type#vin=SAJDZ1FE2KCK62248"
+    },
+    {
+     "name": "CarStory",
+     "url": "https://www.carstory.com/cars/jaguar/f-type/svr"
     }
    ],
    "state": "TX",
    "status": "active",
-   "url": "https://www.cars.com/vehicledetail/1f93bf3f-eacb-46c5-b8eb-8243c3056e91/",
+   "url": "https://www.carstory.com/cars/jaguar/f-type/svr",
    "vin": "SAJDZ1FE2KCK62248",
    "year": 2019
   },
@@ -71,11 +75,11 @@
    "_id": "SAJDZ1FE5JCK51713",
    "body": "Coupe",
    "city": "Roswell",
-   "color": "Corris Grey Metallic (Red/Ebony interior)",
+   "color": "Gray",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 9979,
-   "notes": "Only 2018 SVR found nationally. Also KBB (kbb.com/cars-for-sale/vehicle/791768849), CarGurus (stock K51713), Autolist, iSeeCars, Edmunds ($69,999), CarStory. Carbon ceramic brake pkg per search snippet.",
+   "notes": "Also CarStory/Autolist/iSeeCars; 6 days on site; price unchanged",
    "price": 70757,
    "priceHistory": [
     {
@@ -85,7 +89,7 @@
    ],
    "seller": "Motorpoint Roswell",
    "seller_type": "dealer",
-   "source": "Cars.com",
+   "source": "KBB",
    "sources": [
     {
      "name": "Cars.com",
@@ -94,11 +98,19 @@
     {
      "name": "Dealer website (ebizautos)",
      "url": "https://www.motorpointroswell.com/details-2018-jaguar-f~type-coupe_automatic_svr_awd-used-sajdz1fe5jck51713.html"
+    },
+    {
+     "name": "KBB",
+     "url": "https://www.kbb.com/cars-for-sale/vehicle/791768849"
+    },
+    {
+     "name": "dealer site",
+     "url": "https://www.motorpointroswell.com/used-jaguar-f~type/"
     }
    ],
    "state": "GA",
    "status": "active",
-   "url": "https://www.cars.com/vehicledetail/ecc0e113-9040-43a3-bb28-9bfbcac6accb/",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/791768849",
    "vin": "SAJDZ1FE5JCK51713",
    "year": 2018
   },
@@ -106,11 +118,11 @@
    "_id": "SAJWJ6J81HMK37245",
    "body": "Coupe",
    "city": "Tampa",
-   "color": "Glacier White Metallic (Jet interior)",
+   "color": "Glacier White Metallic",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 66385,
-   "notes": "Carvana listing (carvana.com/vehicle/4649622; Carvana blocked direct check). Also iSeeCars. Price dropped from $59,990.",
+   "notes": "Still InStock in iSeeCars JSON-LD at 58590; Carvana/Edmunds blocked for direct check",
    "price": 58590,
    "priceHistory": [
     {
@@ -120,10 +132,10 @@
    ],
    "seller": "Carvana - Tampa",
    "seller_type": "dealer",
-   "source": "Edmunds",
+   "source": "iSeeCars",
    "sources": [
     {
-     "name": "Edmunds",
+     "name": "carvana (via iseecars/caredge)",
      "url": "https://www.edmunds.com/jaguar/f-type/2017/vin/SAJWJ6J81HMK37245/"
     },
     {
@@ -133,7 +145,7 @@
    ],
    "state": "FL",
    "status": "active",
-   "url": "https://www.edmunds.com/jaguar/f-type/2017/vin/SAJWJ6J81HMK37245/",
+   "url": "https://www.iseecars.com/used_cars-t24726-used-jaguar-f-type-svr-for-sale",
    "vin": "SAJWJ6J81HMK37245",
    "year": 2017
   },
@@ -141,11 +153,11 @@
    "_id": "SAJWJ6J84HMK40317",
    "body": "Coupe",
    "city": "Knoxville",
-   "color": "Ultra Blue Metallic",
+   "color": "Blue",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 18003,
-   "notes": "Also on Carfax (carfax.com/vehicle/SAJWJ6J84HMK40317; no accidents, 5 owners, open recall), CarGurus (stock P0821), Autolist, iSeeCars ($68,997), CarStory. First seen 2026-09-02.",
+   "notes": "Carfax helix API + CarStory (29 days) + Autolist at 68994; iSeeCars 68997; price unchanged",
    "price": 68994,
    "priceHistory": [
     {
@@ -155,20 +167,24 @@
    ],
    "seller": "Harper Jaguar Alfa Romeo Maserati",
    "seller_type": "dealer",
-   "source": "Cars.com",
+   "source": "Carfax",
    "sources": [
     {
-     "name": "Cars.com",
+     "name": "cars.com / caredge",
      "url": "https://www.cars.com/vehicledetail/34972eaa-87be-4b03-a65d-fac8d031dc77/"
     },
     {
      "name": "CarStory / Autolist / iSeeCars",
      "url": "https://www.autolist.com/jaguar-f+type#vin=SAJWJ6J84HMK40317"
+    },
+    {
+     "name": "Carfax",
+     "url": "https://www.carfax.com/vehicle/SAJWJ6J84HMK40317"
     }
    ],
    "state": "TN",
    "status": "active",
-   "url": "https://www.cars.com/vehicledetail/34972eaa-87be-4b03-a65d-fac8d031dc77/",
+   "url": "https://www.carfax.com/vehicle/SAJWJ6J84HMK40317",
    "vin": "SAJWJ6J84HMK40317",
    "year": 2017
   },
@@ -176,11 +192,11 @@
    "_id": "SAJWJ6J85HMK39046",
    "body": "Coupe",
    "city": "Downey",
-   "color": "Rhodium Silver Metallic (red interior)",
+   "color": "Rhodium Silver Metallic",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 25697,
-   "notes": "Also CarGurus (stock K39046), Autolist, iSeeCars. KBB shows ~1,548 days on site - stale/overpriced, confirm with dealer.",
+   "notes": "KBB daysOnSite 1548 (stale ad); price unchanged",
    "price": 69999,
    "priceHistory": [
     {
@@ -190,10 +206,10 @@
    ],
    "seller": "Our Next Car LLC",
    "seller_type": "dealer",
-   "source": "KBB/Autotrader",
+   "source": "KBB",
    "sources": [
     {
-     "name": "KBB/Autotrader",
+     "name": "KBB",
      "url": "https://www.kbb.com/cars-for-sale/vehicle/649578728"
     }
    ],
@@ -207,11 +223,11 @@
    "_id": "SAJWJ6J86HMK39072",
    "body": "Coupe",
    "city": "Aldie",
-   "color": "Blue (black interior)",
+   "color": "Blue",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 35800,
-   "notes": "Autotrader Private Seller Exchange listing; 163 days on site. Only found on KBB/Autotrader.",
+   "notes": "KBB private; 163 days on site; price unchanged",
    "price": 64960,
    "priceHistory": [
     {
@@ -219,12 +235,12 @@
      "p": 64960
     }
    ],
-   "seller": "Private Seller Exchange (private party)",
+   "seller": "Matthew E (Private Seller Exchange)",
    "seller_type": "private",
-   "source": "KBB/Autotrader",
+   "source": "KBB",
    "sources": [
     {
-     "name": "KBB/Autotrader",
+     "name": "KBB",
      "url": "https://www.kbb.com/cars-for-sale/vehicle/778150252"
     }
    ],
@@ -238,34 +254,38 @@
    "_id": "SAJWJ6J87HMK44605",
    "body": "Coupe",
    "city": "Ewing",
-   "color": "Glacier White (red interior)",
+   "color": "White",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 12994,
-   "notes": "Also on Carfax, CarGurus, KBB/Autotrader ($66,995, kbb.com/cars-for-sale/vehicle/784742195), Autolist, iSeeCars, Edmunds (edmunds.com/jaguar/f-type/2017/vin/SAJWJ6J87HMK44605/), CarStory. Carfax: minor damage reported, 2 owners.",
-   "price": 67790,
+   "notes": "PRICE DROP 67790 -> 66995 on KBB (Carfax/Autolist/iSeeCars/CarStory still 67790); KBB price history 72790/70790/69790/67790; CarStory 214 days available",
+   "price": 66995,
    "priceHistory": [
     {
      "d": "2026-09-30",
      "p": 67790
+    },
+    {
+     "d": "2026-09-30",
+     "p": 66995
     }
    ],
    "seller": "J & S Autohaus",
    "seller_type": "dealer",
-   "source": "Cars.com",
+   "source": "KBB",
    "sources": [
     {
-     "name": "Cars.com",
+     "name": "cars.com / caredge",
      "url": "https://www.cars.com/vehicledetail/283a7d67-0a15-44ea-9f43-05555b703205/"
     },
     {
-     "name": "KBB/Autotrader",
+     "name": "KBB",
      "url": "https://www.kbb.com/cars-for-sale/vehicle/784742195"
     }
    ],
    "state": "NJ",
    "status": "active",
-   "url": "https://www.cars.com/vehicledetail/283a7d67-0a15-44ea-9f43-05555b703205/",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/784742195",
    "vin": "SAJWJ6J87HMK44605",
    "year": 2017
   },
@@ -273,11 +293,11 @@
    "_id": "SAJWJ6K80HMK43391",
    "body": "Convertible",
    "city": "Northbrook",
-   "color": "Ultimate Black Metallic (Jet interior)",
+   "color": "Ultimate Black Metallic",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 33100,
-   "notes": "Also KBB (kbb.com/cars-for-sale/vehicle/787389445), CarGurus (Glenview IL, stock UN5494), Autolist ($63,357), iSeeCars, Edmunds (shows Westmont IL), CarStory (Genesis of Glenview $63,392) - same Ultimo group car, multiple locations listed.",
+   "notes": "KBB 57 days; price history 64800/63980/62980; Autolist/iSeeCars 63357 (fee-incl.); price unchanged",
    "price": 62980,
    "priceHistory": [
     {
@@ -287,20 +307,20 @@
    ],
    "seller": "Ultimo Motors North Shore",
    "seller_type": "dealer",
-   "source": "Cars.com",
+   "source": "KBB",
    "sources": [
     {
-     "name": "Cars.com",
+     "name": "cars.com / caredge",
      "url": "https://www.cars.com/vehicledetail/6b890ce5-99de-4e5f-ac4a-c5552fdbf438/"
     },
     {
-     "name": "KBB/Autotrader",
+     "name": "KBB",
      "url": "https://www.kbb.com/cars-for-sale/vehicle/787389445"
     }
    ],
    "state": "IL",
    "status": "active",
-   "url": "https://www.cars.com/vehicledetail/6b890ce5-99de-4e5f-ac4a-c5552fdbf438/",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/787389445",
    "vin": "SAJWJ6K80HMK43391",
    "year": 2017
   },
@@ -308,11 +328,11 @@
    "_id": "SAJWJ6K83HMK45989",
    "body": "Convertible",
    "city": "Grand Prairie",
-   "color": "Ultra Blue Metallic (Sienna Tan interior)",
+   "color": "Ultra Blue Metallic / Siena Tan",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 52200,
-   "notes": "Edmunds only; flagged 'not dealer-verified'. Far below market - verify title/history. Contact listed as 'Mack 214-534-9334'.",
+   "notes": "CarEdge VIN page still shows 45500 listing; dealer site and Edmunds 403; not on KBB/Autolist/Carfax/CarStory",
    "price": 45500,
    "priceHistory": [
     {
@@ -322,16 +342,20 @@
    ],
    "seller": "Indulgence Motors",
    "seller_type": "dealer",
-   "source": "Edmunds",
+   "source": "CarEdge",
    "sources": [
     {
      "name": "Edmunds",
      "url": "https://www.edmunds.com/jaguar/f-type/2017/vin/SAJWJ6K83HMK45989/"
+    },
+    {
+     "name": "CarEdge",
+     "url": "https://caredge.com/shop-cars/used/SAJWJ6K83HMK45989"
     }
    ],
    "state": "TX",
    "status": "unverified",
-   "url": "https://www.edmunds.com/jaguar/f-type/2017/vin/SAJWJ6K83HMK45989/",
+   "url": "https://caredge.com/shop-cars/used/SAJWJ6K83HMK45989",
    "vin": "SAJWJ6K83HMK45989",
    "year": 2017
   },
@@ -343,7 +367,7 @@
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 28000,
-   "notes": "Private seller; price cut from $64,900 (9/13/26) to $62,900 (9/24/26). Serviced at Jaguar Santa Monica Aug 2026.",
+   "notes": "cars.com 403; private listing, not in caredge; VIN search shows only cars.com SRPs",
    "price": 62900,
    "priceHistory": [
     {
@@ -353,15 +377,15 @@
    ],
    "seller": "Farbod (private)",
    "seller_type": "private",
-   "source": "Cars.com",
+   "source": "cars.com",
    "sources": [
     {
-     "name": "Cars.com",
+     "name": "cars.com",
      "url": "https://www.cars.com/vehicledetail/b7855062-ed7a-48d0-ae93-369d05b0a696/"
     }
    ],
    "state": "CA",
-   "status": "active",
+   "status": "unverified",
    "url": "https://www.cars.com/vehicledetail/b7855062-ed7a-48d0-ae93-369d05b0a696/",
    "vin": "SAJWJ6K88HMK43381",
    "year": 2017
@@ -370,34 +394,38 @@
    "_id": "SAJWJ6K89HMK45754",
    "body": "Convertible",
    "city": "Novi",
-   "color": "Glacier White (red interior)",
+   "color": "White",
    "firstSeen": "2026-09-30",
    "lastSeen": "2026-09-30",
    "miles": 58831,
-   "notes": "Also KBB ($59,900, kbb.com/cars-for-sale/vehicle/791004918), CarGurus (stock P493300), Edmunds, CarStory.",
-   "price": 60214,
+   "notes": "PRICE DROP 60214 -> 59900 on KBB (CarStory still 60214); 15 days on site",
+   "price": 59900,
    "priceHistory": [
     {
      "d": "2026-09-30",
      "p": 60214
+    },
+    {
+     "d": "2026-09-30",
+     "p": 59900
     }
    ],
    "seller": "Jaguar Land Rover Novi",
    "seller_type": "dealer",
-   "source": "Cars.com",
+   "source": "KBB",
    "sources": [
     {
-     "name": "Cars.com",
+     "name": "cars.com / caredge",
      "url": "https://www.cars.com/vehicledetail/73459318-bb09-4bd7-bbac-dc31a19b3572/"
     },
     {
-     "name": "KBB/Autotrader",
+     "name": "KBB",
      "url": "https://www.kbb.com/cars-for-sale/vehicle/791004918"
     }
    ],
    "state": "MI",
    "status": "active",
-   "url": "https://www.cars.com/vehicledetail/73459318-bb09-4bd7-bbac-dc31a19b3572/",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/791004918",
    "vin": "SAJWJ6K89HMK45754",
    "year": 2017
   },
@@ -573,10 +601,10 @@
  ],
  "meta": {
   "_id": "status",
-  "blocked": "CarGurus, Cars.com search, eBay, Facebook, Carvana, CarMax, TrueCar",
+  "blocked": "Cars.com detail pages, Edmunds, Carvana, Carfax site (helix API works), eBay, CarGurus, classic.com, Cars & Bids, Hemmings, Collecting Cars, carsforsale, Hendrick/Indulgence dealer sites",
   "firstRun": "2026-09-30",
   "lastRun": "2026-09-30",
-  "sourcesChecked": 40,
-  "summary": "First deep sweep: 14 live U.S. SVRs (10 from 2017, 1 from 2018, 3 from 2019). Only one 2018 is for sale nationally. Carfax/KBB show ~70 F-Types of all trims from these years for sale, so coverage looks close to complete."
+  "sourcesChecked": 30,
+  "summary": "No new SVRs today. Price drops: 2017 coupe in Ewing NJ to $66,995 and 2017 convertible in Novi MI to $59,900. The Houston 2019 has a salvage history (IAAI, June 2024). The Miami eBay 2019 convertible and the Atlanta/Richmond Carfax 2017 look sold."
  }
 }

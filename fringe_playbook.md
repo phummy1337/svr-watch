@@ -23,3 +23,10 @@ CarGurus, Cars.com, Carfax, TrueCar, Carvana, JD Power, CarsDirect, carsforsale.
 - `"Pre-Owned 2018 Jaguar F-TYPE SVR"` / `"Used 2017 Jaguar F-TYPE SVR"` (most hits are dealer VDPs that are already sold)
 - `carsandbids 2018 OR 2019 Jaguar F-Type SVR auction <month year>`
 - `"<street address>" dealer` to name a CarStory seller from its address
+
+## Added 2026-09-30 (noon sweep)
+- WORKS: CarEdge VIN page `https://www.caredge.com/shop-cars/used/<VIN>` curls fine; gives price, dealer, in-stock or "Vehicle Not Found". It can be stale (it kept the Grand Prairie car with photos from 7/2024), so use it as a liveness hint only.
+- WORKS: Carfax search API `helix.carfax.com/search/v2/vehicles?...` returns JSON even though carfax.com pages 403/503. It ignores the trim filter and skews to the Northeast, so filter by VIN regex.
+- WORKS: BaT model page (curl) embeds completed results as data, good for comps. PCarMarket and jaguarforums curl fine.
+- BLOCKED: Edmunds now 403s for every UA including iPhone. Cars & Bids, Collecting Cars and Sotheby's Motorsport 403; BaT, Hemmings and Mecum are rejected by WebSearch allowed_domains; Hagerty sales history needs a login; ftypeforum.com doesn't resolve.
+- Craigslist: watch for Canadian cross-posts (e.g. Port Huron → Scarborough ON, CAD price) and exclude them.
