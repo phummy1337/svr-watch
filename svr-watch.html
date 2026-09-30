@@ -1,0 +1,420 @@
+<title>SVR Watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#eef0f3; --surface:#ffffff; --surface-2:#f6f7f9; --ink:#12161d; --ink-2:#4a5260; --ink-3:#7b8492;
+  --line:#dde1e7; --accent:#1c46c8; --accent-ink:#ffffff; --accent-soft:#e3eafc;
+  --good:#1d7a4a; --good-soft:#e2f3ea; --warn:#9a6300; --warn-soft:#fbf0d9; --bad:#b3261e; --bad-soft:#fbe5e3;
+  --y17:#1c46c8; --y18:#c2410c; --y19:#0f8a7a;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0c0f14; --surface:#141922; --surface-2:#1a202b; --ink:#e8ebf0; --ink-2:#a9b1be; --ink-3:#7d8694;
+    --line:#262d39; --accent:#6f93ff; --accent-ink:#0c0f14; --accent-soft:#1a2542;
+    --good:#4cc38a; --good-soft:#14281e; --warn:#e3a93a; --warn-soft:#2b2210; --bad:#f07167; --bad-soft:#2e1614;
+    --y17:#6f93ff; --y18:#f08a4b; --y19:#3cc9b4;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0c0f14; --surface:#141922; --surface-2:#1a202b; --ink:#e8ebf0; --ink-2:#a9b1be; --ink-3:#7d8694;
+  --line:#262d39; --accent:#6f93ff; --accent-ink:#0c0f14; --accent-soft:#1a2542;
+  --good:#4cc38a; --good-soft:#14281e; --warn:#e3a93a; --warn-soft:#2b2210; --bad:#f07167; --bad-soft:#2e1614;
+  --y17:#6f93ff; --y18:#f08a4b; --y19:#3cc9b4;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 var(--body);padding-inline:16px;padding-block:20px 48px}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+a{color:var(--accent)}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+.brand h1{font:700 40px/1 var(--display);letter-spacing:.01em;margin:0;text-transform:uppercase}
+.brand h1 span{color:var(--accent)}
+.brand p{margin:4px 0 0;color:var(--ink-2)}
+.runinfo{font:12px/1.4 var(--mono);color:var(--ink-3);text-align:right}
+.runinfo b{color:var(--ink-2);font-weight:500}
+
+.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat{background:var(--surface);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.stat .k{font:600 11px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.stat .v{font:600 28px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.stat .s{font-size:12px;color:var(--ink-2)}
+@media (max-width:860px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.chartbox{padding:14px 16px 8px}
+.chartbox h2,.sec h2{font:600 18px/1.2 var(--display);letter-spacing:.04em;text-transform:uppercase;margin:0}
+.chartbox .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--ink-2)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:0}
+#chart{width:100%;height:auto;display:block;margin-top:6px}
+#chart text{fill:var(--ink-3);font:11px var(--mono)}
+#chart .grid{stroke:var(--line);stroke-width:1}
+#chart circle{cursor:pointer;stroke:var(--surface);stroke-width:1.5}
+#chart circle:hover{stroke:var(--ink);stroke-width:2}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 14px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{background:var(--surface);border:0;padding:6px 11px;cursor:pointer;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.filters select,.filters input[type=search]{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.filters input[type=search]{flex:1 1 180px;min-width:0}
+.filters label.chk{display:inline-flex;gap:6px;align-items:center;color:var(--ink-2);font-size:13px;cursor:pointer}
+.count{margin-left:auto;color:var(--ink-3);font-size:12px}
+
+.list{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:minmax(0,2.3fr) 0.9fr 1.2fr 1.3fr 1.5fr auto;gap:14px;align-items:center;padding:12px 16px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row.flash{background:var(--accent-soft)}
+.row.dim{opacity:.55}
+.car .t{font:600 19px/1.15 var(--display);letter-spacing:.01em}
+.car .yr{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:2px}
+.car .sub{color:var(--ink-2);font-size:13px}
+.vin{font:12px var(--mono);color:var(--ink-3);letter-spacing:.02em;word-break:break-all}
+.num{font-variant-numeric:tabular-nums}
+.miles .v,.price .v{font:600 18px/1.2 var(--display);font-variant-numeric:tabular-nums}
+.miles .l,.price .l,.loc .l,.src .l{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.delta{font-size:12px;font-variant-numeric:tabular-nums}
+.delta.down{color:var(--good)} .delta.up{color:var(--bad)}
+.loc .v{font-weight:500}
+.src .v{font-weight:500}
+.src .more{font-size:12px;color:var(--ink-3)}
+.pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.pill{font:600 10.5px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;padding:4px 6px;border-radius:4px;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
+.pill.new{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.pill.drop{background:var(--good-soft);color:var(--good);border-color:transparent}
+.pill.auction{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.pill.unv{background:var(--surface-2);color:var(--ink-3)}
+.pill.gone{background:var(--bad-soft);color:var(--bad);border-color:transparent}
+.pill.flag{background:var(--bad-soft);color:var(--bad);border-color:transparent}
+.acts{display:flex;gap:6px;align-items:center}
+.ib{background:var(--surface-2);border:1px solid var(--line);border-radius:7px;width:32px;height:32px;display:inline-grid;place-items:center;cursor:pointer;color:var(--ink-2);text-decoration:none}
+.ib:hover{border-color:var(--ink-3);color:var(--ink)}
+.ib[aria-pressed="true"]{color:var(--warn);border-color:var(--warn)}
+.ib svg{width:16px;height:16px}
+.open{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.open:hover{color:var(--accent-ink);filter:brightness(1.08)}
+.notes{grid-column:1/-1;font-size:12.5px;color:var(--ink-2);margin-top:-6px}
+@media (max-width:900px){
+  .row{grid-template-columns:1fr 1fr;row-gap:8px}
+  .car{grid-column:1/-1}
+  .acts{grid-column:1/-1}
+}
+.empty{padding:28px 16px;color:var(--ink-2);text-align:center}
+
+.sec{display:flex;flex-direction:column;gap:10px}
+.sec .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.sec .hint{color:var(--ink-3);font-size:12px}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 12px;border-top:1px solid var(--line);white-space:nowrap}
+th{font:600 11px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);border-top:0}
+td.num{text-align:right} th.num{text-align:right}
+tr.nosale td{color:var(--ink-3)}
+details summary{cursor:pointer;color:var(--ink-2);padding:10px 16px}
+.foot{color:var(--ink-3);font-size:12px;line-height:1.6}
+.foot code{font-family:var(--mono)}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>SVR <span>Watch</span></h1>
+      <p>Every U.S. listing of a 2017–2019 Jaguar F-Type SVR, from major marketplaces, auctions, dealer sites and private sellers.</p>
+    </div>
+    <div class="runinfo" id="runinfo">Connecting…</div>
+  </header>
+
+  <section class="stats" id="stats" aria-label="Market summary"></section>
+
+  <section class="panel chartbox">
+    <div class="head">
+      <h2>Price vs. miles</h2>
+      <div class="legend"><span><i style="background:var(--y17)"></i>2017</span><span><i style="background:var(--y18)"></i>2018</span><span><i style="background:var(--y19)"></i>2019</span></div>
+    </div>
+    <svg id="chart" viewBox="0 0 1000 300" role="img" aria-label="Scatter of asking price against mileage for live listings"></svg>
+  </section>
+
+  <section class="panel">
+    <div class="filters">
+      <div class="seg" id="f-year" role="group" aria-label="Model year">
+        <button data-v="all" aria-pressed="true">All</button><button data-v="2017" aria-pressed="false">2017</button><button data-v="2018" aria-pressed="false">2018</button><button data-v="2019" aria-pressed="false">2019</button>
+      </div>
+      <div class="seg" id="f-body" role="group" aria-label="Body style">
+        <button data-v="all" aria-pressed="true">Both</button><button data-v="Coupe" aria-pressed="false">Coupe</button><button data-v="Convertible" aria-pressed="false">Convertible</button>
+      </div>
+      <select id="f-seller" aria-label="Seller type">
+        <option value="all">All sellers</option><option value="dealer">Dealers</option><option value="private">Private</option><option value="auction">Auctions</option>
+      </select>
+      <select id="f-state" aria-label="State"><option value="all">All states</option></select>
+      <select id="f-sort" aria-label="Sort">
+        <option value="price">Lowest price</option><option value="price-desc">Highest price</option><option value="miles">Lowest miles</option><option value="new">Newest found</option><option value="drop">Biggest drop</option>
+      </select>
+      <input type="search" id="f-q" placeholder="Search color, dealer, city, VIN…">
+      <label class="chk"><input type="checkbox" id="f-starred"> Starred</label>
+      <label class="chk"><input type="checkbox" id="f-hidden"> Show hidden</label>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="list" id="list"><div class="empty">Loading listings…</div></div>
+  </section>
+
+  <section class="sec">
+    <div class="head"><h2>Recent sold comps</h2><span class="hint">Closed auctions, for pricing context</span></div>
+    <div class="panel tbl"><table id="comps"><thead><tr><th>Date</th><th>Year</th><th>Body</th><th class="num">Miles</th><th class="num">Result</th><th>Where</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <details id="gone-wrap"><summary id="gone-sum">No longer listed</summary><div class="list" id="gone"></div></details>
+  </section>
+
+  <p class="foot" id="foot">A Claude scheduled task re-checks every source daily and updates this page. Stars and hides are private to you. Listings marked <b>unverified</b> were found but their page couldn't be confirmed live.</p>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt$ = n => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
+const fmtK = n => n == null ? "—" : Math.round(n).toLocaleString("en-US");
+const today = () => new Date().toISOString().slice(0,10);
+const daysBetween = (a,b) => Math.round((new Date(b) - new Date(a)) / 864e5);
+const LIVE = new Set(["active","auction","unverified"]);
+
+const S = { listings: [], comps: [], meta: null, prefs: { starred:{}, hidden:{} }, uid:null, db:null,
+  f: { year:"all", body:"all", seller:"all", state:"all", sort:"price", q:"", starred:false, hidden:false } };
+
+try { const saved = JSON.parse(localStorage.getItem("svr-filters") || "null"); if (saved) Object.assign(S.f, saved); } catch {}
+const saveFilters = () => { try { localStorage.setItem("svr-filters", JSON.stringify(S.f)); } catch {} };
+
+function lastPrice(l){ return l.price ?? null; }
+function priceDelta(l){
+  const h = (l.priceHistory || []).filter(x => x && x.p != null);
+  if (h.length < 2) return 0;
+  return h[h.length-1].p - h[0].p;
+}
+function isNew(l){
+  if (!l.firstSeen || !S.meta) return false;
+  if (S.meta.firstRun && l.firstSeen <= S.meta.firstRun) return false;
+  return daysBetween(l.firstSeen, today()) <= 2;
+}
+
+function filtered(){
+  const f = S.f, q = f.q.trim().toLowerCase();
+  let rows = S.listings.filter(l => LIVE.has(l.status));
+  rows = rows.filter(l =>
+    (f.year === "all" || String(l.year) === f.year) &&
+    (f.body === "all" || l.body === f.body) &&
+    (f.seller === "all" || l.seller_type === f.seller || (f.seller === "auction" && l.status === "auction")) &&
+    (f.state === "all" || l.state === f.state) &&
+    (!f.starred || S.prefs.starred[l._id]) &&
+    (f.hidden || !S.prefs.hidden[l._id]) &&
+    (!q || [l.color,l.seller,l.city,l.state,l.vin,l.source,l.notes,l.body].join(" ").toLowerCase().includes(q)));
+  const nz = v => v == null ? Infinity : v;
+  const sorters = {
+    price: (a,b) => nz(a.price) - nz(b.price),
+    "price-desc": (a,b) => (b.price ?? -1) - (a.price ?? -1),
+    miles: (a,b) => nz(a.miles) - nz(b.miles),
+    new: (a,b) => String(b.firstSeen||"").localeCompare(String(a.firstSeen||"")),
+    drop: (a,b) => priceDelta(a) - priceDelta(b),
+  };
+  return rows.sort(sorters[f.sort] || sorters.price);
+}
+
+function median(a){ if(!a.length) return null; const s=[...a].sort((x,y)=>x-y), m=s.length>>1; return s.length%2 ? s[m] : (s[m-1]+s[m])/2; }
+
+function renderStats(){
+  const live = S.listings.filter(l => LIVE.has(l.status));
+  const prices = live.map(l => l.price).filter(p => p != null);
+  const miles = live.map(l => l.miles).filter(p => p != null);
+  const byYear = y => live.filter(l => l.year === y).length;
+  const drops = live.filter(l => priceDelta(l) < 0).length;
+  const newCt = live.filter(isNew).length;
+  const lo = live.filter(l=>l.price!=null && l.status!=="auction").sort((a,b)=>a.price-b.price)[0];
+  const tiles = [
+    ["Live listings", live.length, `${byYear(2017)} · ${byYear(2018)} · ${byYear(2019)} (’17 · ’18 · ’19)`],
+    ["New this run", newCt, newCt ? "Found in the last 2 days" : "Nothing new"],
+    ["Median ask", fmt$(median(prices)), `${prices.length} with a price`],
+    ["Lowest ask", lo ? fmt$(lo.price) : "—", lo ? `${lo.year} · ${fmtK(lo.miles)} mi · ${lo.state||""}` : ""],
+    ["Median miles", fmtK(median(miles)), miles.length ? `${fmtK(Math.min(...miles))} – ${fmtK(Math.max(...miles))}` : ""],
+    ["Price drops", drops, "Since first seen"],
+  ];
+  $("#stats").innerHTML = tiles.map(([k,v,s]) => `<div class="stat"><span class="k">${k}</span><span class="v">${esc(v)}</span><span class="s">${esc(s)}</span></div>`).join("");
+}
+
+function renderChart(){
+  const svg = $("#chart");
+  const pts = filtered().filter(l => l.price != null && l.miles != null);
+  const W=1000,H=300,L=64,R=16,T=12,B=34;
+  if (!pts.length){ svg.innerHTML = `<text x="${W/2}" y="${H/2}" text-anchor="middle">No priced listings match the filters</text>`; return; }
+  const niceMax = (v, step) => Math.max(step, Math.ceil(v/step)*step);
+  const xMax = niceMax(Math.max(...pts.map(p=>p.miles))*1.05, 10000);
+  const pMin = Math.min(...pts.map(p=>p.price)), pMax = Math.max(...pts.map(p=>p.price));
+  const yLo = Math.max(0, Math.floor(pMin*0.92/10000)*10000), yHi = niceMax(pMax*1.04, 10000);
+  const x = v => L + (v/xMax)*(W-L-R), y = v => H-B - ((v-yLo)/(yHi-yLo))*(H-T-B);
+  let g = "";
+  const yStep = (yHi-yLo) <= 60000 ? 10000 : 20000;
+  for (let v=yLo; v<=yHi; v+=yStep) g += `<line class="grid" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end">$${v/1000}k</text>`;
+  const xStep = xMax <= 50000 ? 10000 : 20000;
+  for (let v=0; v<=xMax; v+=xStep) g += `<text x="${x(v)}" y="${H-B+18}" text-anchor="middle">${v/1000}k mi</text>`;
+  const col = {2017:"var(--y17)",2018:"var(--y18)",2019:"var(--y19)"};
+  g += pts.map(p => `<circle data-id="${esc(p._id)}" cx="${x(p.miles).toFixed(1)}" cy="${y(p.price).toFixed(1)}" r="6" fill="${col[p.year]||"var(--ink-3)"}"><title>${p.year} ${esc(p.body||"")} · ${fmtK(p.miles)} mi · ${fmt$(p.price)} · ${esc(p.city||"")} ${esc(p.state||"")}</title></circle>`).join("");
+  svg.innerHTML = g;
+}
+
+const ICON = {
+  star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 17.1 6.6 20l1.1-6.1L3.2 9.6l6.1-.8z"/></svg>',
+  starO:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 17.1 6.6 20l1.1-6.1L3.2 9.6l6.1-.8z"/></svg>',
+  hide:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 3l18 18M10.6 5.1A9.8 9.8 0 0 1 12 5c5 0 9 4.5 10 7-.4 1-1.3 2.4-2.6 3.7M6.6 6.6C4.4 8 2.8 10.2 2 12c1 2.5 5 7 10 7 1.9 0 3.6-.6 5-1.5"/></svg>',
+  ext:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>'
+};
+
+function rowHTML(l, opts={}){
+  const d = priceDelta(l), starred = !!S.prefs.starred[l._id], hidden = !!S.prefs.hidden[l._id];
+  const pills = [];
+  if (opts.gone) pills.push(`<span class="pill gone">Gone ${l.lastSeen ? "· last seen " + esc(l.lastSeen) : ""}</span>`);
+  if (!opts.gone && isNew(l)) pills.push('<span class="pill new">New</span>');
+  if (d < 0) pills.push(`<span class="pill drop">Dropped ${fmt$(-d)}</span>`);
+  if (l.status === "auction") pills.push(`<span class="pill auction">Auction${l.ends ? " · ends " + esc(String(l.ends).slice(0,10)) : ""}</span>`);
+  if (l.status === "unverified") pills.push('<span class="pill unv">Unverified</span>');
+  if (l.seller_type === "private") pills.push('<span class="pill">Private seller</span>');
+  if (l.flag) pills.push(`<span class="pill flag">${esc(l.flag)}</span>`);
+  const listed = l.firstSeen ? daysBetween(l.firstSeen, l.lastSeen || today()) : null;
+  const others = (l.sources || []).filter(s => s.url && s.url !== l.url);
+  const yc = {2017:"var(--y17)",2018:"var(--y18)",2019:"var(--y19)"}[l.year] || "var(--ink-3)";
+  return `<div class="row${hidden?" dim":""}" id="r-${esc(l._id)}">
+    <div class="car">
+      <div class="t"><span class="yr" style="background:${yc}"></span>${esc(l.year)} F-Type SVR ${esc(l.body||"")}</div>
+      <div class="sub">${esc(l.color || "Color not listed")}${listed!=null ? ` · tracked ${listed}d` : ""}</div>
+      ${l.vin ? `<div class="vin">${esc(l.vin)}</div>` : ""}
+      ${pills.length ? `<div class="pills">${pills.join("")}</div>` : ""}
+    </div>
+    <div class="miles"><div class="l">Miles</div><div class="v">${fmtK(l.miles)}</div></div>
+    <div class="price"><div class="l">${l.status==="auction"?"Current bid":"Asking"}</div><div class="v">${fmt$(l.price)}</div>${d ? `<div class="delta ${d<0?"down":"up"}">${d<0?"▼":"▲"} ${fmt$(Math.abs(d))}</div>` : ""}</div>
+    <div class="loc"><div class="l">Location</div><div class="v">${esc([l.city,l.state].filter(Boolean).join(", ") || "—")}</div></div>
+    <div class="src"><div class="l">${esc(l.source||"Source")}</div><div class="v">${esc(l.seller||"—")}</div>${others.length ? `<div class="more">also on ${others.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(", ")}</div>` : ""}</div>
+    <div class="acts">
+      ${S.uid ? `<button class="ib" data-act="star" data-id="${esc(l._id)}" aria-pressed="${starred}" aria-label="${starred?"Unstar":"Star"} this car">${starred?ICON.star:ICON.starO}</button>
+      <button class="ib" data-act="hide" data-id="${esc(l._id)}" aria-pressed="${hidden}" aria-label="${hidden?"Unhide":"Hide"} this car">${ICON.hide}</button>` : ""}
+      ${l.url ? `<a class="ib open" href="${esc(l.url)}" target="_blank" rel="noopener" aria-label="Open listing">${ICON.ext}</a>` : ""}
+    </div>
+    ${l.notes ? `<div class="notes">${esc(l.notes)}</div>` : ""}
+  </div>`;
+}
+
+function renderList(){
+  const rows = filtered();
+  const live = S.listings.filter(l => LIVE.has(l.status)).length;
+  $("#count").textContent = `${rows.length} of ${live} shown`;
+  $("#list").innerHTML = rows.length ? rows.map(l => rowHTML(l)).join("") :
+    `<div class="empty">${S.listings.length ? "No listings match these filters." : "No listings yet. The first sweep is still loading them in."}</div>`;
+  const gone = S.listings.filter(l => l.status === "gone").sort((a,b)=>String(b.lastSeen||"").localeCompare(String(a.lastSeen||"")));
+  $("#gone-sum").textContent = `No longer listed (${gone.length})`;
+  $("#gone").innerHTML = gone.map(l => rowHTML(l,{gone:true})).join("") || '<div class="empty">None yet.</div>';
+}
+
+function renderComps(){
+  const rows = [...S.comps].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+  $("#comps tbody").innerHTML = rows.length ? rows.map(c => `<tr${c.sold===false?' class="nosale"':''}><td class="num">${esc(c.date||"—")}</td><td>${esc(c.year)}</td><td>${esc(c.body||"—")}</td><td class="num">${fmtK(c.miles)}</td><td class="num">${c.sold===false ? `<span class="pill unv">No sale</span> bid to ${fmt$(c.price)}` : fmt$(c.price)}</td><td>${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.source||"Link")}</a>`:esc(c.source||"")}</td></tr>`).join("")
+    : '<tr><td colspan="6" style="color:var(--ink-3)">No comps loaded yet.</td></tr>';
+}
+
+function renderMeta(){
+  const m = S.meta;
+  if (!m){ $("#runinfo").innerHTML = "Waiting for first sweep"; return; }
+  $("#runinfo").innerHTML = `Last sweep <b>${esc(m.lastRun||"—")}</b><br>${esc(m.sourcesChecked ?? "?")} sources checked${m.blocked ? ` · blocked: ${esc(m.blocked)}` : ""}`;
+  if (m.summary) $("#foot").innerHTML = `<b>Latest sweep:</b> ${esc(m.summary)}<br>A Claude scheduled task re-checks every source daily and updates this page. Stars and hides are private to you. Listings marked <b>unverified</b> were found but their page couldn't be confirmed live.`;
+}
+
+function renderStates(){
+  const sel = $("#f-state"), cur = S.f.state;
+  const states = [...new Set(S.listings.filter(l=>LIVE.has(l.status)).map(l=>l.state).filter(Boolean))].sort();
+  sel.innerHTML = '<option value="all">All states</option>' + states.map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join("");
+  sel.value = states.includes(cur) ? cur : "all";
+}
+
+function renderAll(){ renderStates(); renderStats(); renderChart(); renderList(); renderComps(); renderMeta(); }
+
+function syncControls(){
+  for (const [id,key] of [["#f-year","year"],["#f-body","body"]])
+    document.querySelectorAll(id+" button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === S.f[key])));
+  $("#f-seller").value = S.f.seller; $("#f-sort").value = S.f.sort; $("#f-q").value = S.f.q;
+  $("#f-starred").checked = S.f.starred; $("#f-hidden").checked = S.f.hidden;
+}
+function setF(k,v){ S.f[k]=v; saveFilters(); syncControls(); renderChart(); renderList(); }
+for (const [id,key] of [["#f-year","year"],["#f-body","body"]])
+  $(id).addEventListener("click", e => { const b = e.target.closest("button"); if (b) setF(key, b.dataset.v); });
+$("#f-seller").addEventListener("change", e => setF("seller", e.target.value));
+$("#f-state").addEventListener("change", e => setF("state", e.target.value));
+$("#f-sort").addEventListener("change", e => setF("sort", e.target.value));
+$("#f-q").addEventListener("input", e => setF("q", e.target.value));
+$("#f-starred").addEventListener("change", e => setF("starred", e.target.checked));
+$("#f-hidden").addEventListener("change", e => setF("hidden", e.target.checked));
+
+$("#chart").addEventListener("click", e => {
+  const c = e.target.closest("circle"); if (!c) return;
+  const r = document.getElementById("r-" + c.dataset.id); if (!r) return;
+  r.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"center"});
+  r.classList.add("flash"); setTimeout(()=>r.classList.remove("flash"), 1600);
+});
+
+let prefWriting = Promise.resolve();
+document.addEventListener("click", e => {
+  const b = e.target.closest("button[data-act]"); if (!b || !S.uid) return;
+  const map = b.dataset.act === "star" ? "starred" : "hidden", id = b.dataset.id;
+  const next = { starred:{...S.prefs.starred}, hidden:{...S.prefs.hidden} };
+  if (next[map][id]) delete next[map][id]; else next[map][id] = true;
+  S.prefs = next; renderList(); renderChart();
+  if (S.db) prefWriting = prefWriting.then(() => S.db.doc("data/users/"+S.uid+"/prefs").set(next)).catch(()=>{});
+  else try { localStorage.setItem("svr-prefs", JSON.stringify(next)); } catch {}
+});
+
+syncControls();
+renderAll();
+
+// Outside claude.ai (GitHub Pages): read the committed data.json; stars/hides stay in this browser.
+async function loadStatic(){
+  try {
+    const r = await fetch("data.json", { cache: "no-store" });
+    if (!r.ok) throw 0;
+    const d = await r.json();
+    S.listings = d.listings || []; S.comps = d.comps || []; S.meta = d.meta || null;
+    S.uid = "local";
+    try { const p = JSON.parse(localStorage.getItem("svr-prefs") || "null"); if (p) S.prefs = { starred:p.starred||{}, hidden:p.hidden||{} }; } catch {}
+    renderAll();
+  } catch {
+    $("#runinfo").textContent = "Couldn't load listings";
+    $("#list").innerHTML = '<div class="empty">Listing data failed to load. Reload the page to try again.</div>';
+  }
+}
+
+(async () => {
+  if (!window.claude?.use) return loadStatic();
+  const db = await claude.use("db");
+  if (!db) return loadStatic();
+  S.db = db;
+  const onErr = e => { $("#runinfo").textContent = "Live updates paused — reload to reconnect"; };
+  db.collection("listings").onSnapshot(s => { S.listings = s.docs.map(d => ({ _id:d.id, ...d.data() })); renderAll(); }, onErr);
+  db.collection("comps").onSnapshot(s => { S.comps = s.docs.map(d => d.data()); renderComps(); }, onErr);
+  db.doc("meta/status").onSnapshot(s => { S.meta = s.exists ? s.data() : null; renderMeta(); renderStats(); renderList(); }, onErr);
+  const user = await claude.use("user");
+  const uid = user ? await user.id() : null;
+  if (uid){
+    S.uid = uid;
+    db.doc("data/users/"+uid+"/prefs").onSnapshot(s => {
+      const d = s.exists ? s.data() : {};
+      S.prefs = { starred: d.starred || {}, hidden: d.hidden || {} };
+      renderList(); renderChart();
+    }, () => {});
+    renderList();
+  }
+})();
+</script>
