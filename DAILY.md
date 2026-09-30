@@ -16,4 +16,7 @@ Target: every current U.S. listing of a 2017–2019 Jaguar F-Type SVR. U.S. only
    VIN check: 2017 `SAJWJ6J8`/`SAJWJ6K8`; 2018–19 `SAJDZ1FE`/`SAJDZ5FE`. Drop non-VIN finds that duplicate a VIN'd car (same miles/price/city).
 4. `python3 merge.py $D/existing $D/out $D/finds.json [$D/comps.json]`
 5. Apply `$D/out/writes.json` with ArtifactData `batch` (≤50 per batch). Then `update` `meta/status`: `lastRun` (today), `sourcesChecked`, `blocked`, `summary` (one or two plain sentences: new cars, price drops, cars gone).
-6. If there are NEW listings or price drops, send a push notification with the one-line summary.
+6. Publish to GitHub Pages (https://phummy1337.github.io/svr-watch/): ArtifactData `list` each of `listings`, `comps`, `meta` (limit 1000) with `out_dir: <abs path to $D/final>`, then
+   `python3 export.py $D/final && git add data.json fringe_playbook.md && git commit -m "Sweep $(date +%F)" && git push`.
+   If svr-watch.html changed, also run `./build.sh` and commit index.html.
+7. If there are NEW listings or price drops, send a push notification with the one-line summary.
