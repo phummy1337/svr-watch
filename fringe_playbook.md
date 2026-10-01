@@ -30,3 +30,10 @@ CarGurus, Cars.com, Carfax, TrueCar, Carvana, JD Power, CarsDirect, carsforsale.
 - WORKS: BaT model page (curl) embeds completed results as data, good for comps. PCarMarket and jaguarforums curl fine.
 - BLOCKED: Edmunds now 403s for every UA including iPhone. Cars & Bids, Collecting Cars and Sotheby's Motorsport 403; BaT, Hemmings and Mecum are rejected by WebSearch allowed_domains; Hagerty sales history needs a login; ftypeforum.com doesn't resolve.
 - Craigslist: watch for Canadian cross-posts (e.g. Port Huron → Scarborough ON, CAD price) and exclude them.
+
+## Added 2026-10-01
+- CORRECTION: every CarEdge VIN page contains the strings "Vehicle Not Found" and "Sold" (template text), even for live cars. A gone car shows as a small page (~122KB) with no listing data/price; judge by price presence, not text.
+- WORKS: Capital One Auto Navigator pages curl fine and include VINs (no new SVRs today).
+- WORKS: Hagerty Marketplace (search ignores the query; page through all ~200 live lots), duPont Registry now renders with VINs, BaT search page carries every live lot, PCarMarket works on its new site URLs.
+- BLOCKED: jaguarforums.com now 403s (worked 2026-09-30).
+- Ferco Motors Miami 2019 conv (eBay 287429283044) VIN = SAJDZ5FE9KCK61153. The Carfax "Atlanta" 2017 coupe (29,458 mi, $66,590) is actually Carvana Richmond VA.
