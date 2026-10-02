@@ -37,3 +37,10 @@ CarGurus, Cars.com, Carfax, TrueCar, Carvana, JD Power, CarsDirect, carsforsale.
 - WORKS: Hagerty Marketplace (search ignores the query; page through all ~200 live lots), duPont Registry now renders with VINs, BaT search page carries every live lot, PCarMarket works on its new site URLs.
 - BLOCKED: jaguarforums.com now 403s (worked 2026-09-30).
 - Ferco Motors Miami 2019 conv (eBay 287429283044) VIN = SAJDZ5FE9KCK61153. The Carfax "Atlanta" 2017 coupe (29,458 mi, $66,590) is actually Carvana Richmond VA.
+
+## Added 2026-10-02
+- WORKS: Searching only carsandbids.com returns lot pages with the VIN in the title, plus the end date and high bid. C&B 2017 SVR coupe SAJWJ6J89HMK43732 (Winthrop ME, 8.1k mi) ended 2026-09-28 at a $54,000 high bid; sold/reserve not confirmed, so watch for a relist.
+- WORKS: Small dealer sitemaps (e.g. exoticmotorsportsok.com/sitemap.xml) list every VDP including sold ones; a sold VDP's title says "(Sold)". The classic.com Edmond OK 2019 SVR is sold.
+- WORKS: carsforsale.com vehicle pages load via WebFetch even though curl 403s.
+- BLOCKED: Westlake Financial dealer listings, turnersv.com (403), porsche.com dealer pages (429).
+- Gotcha: 2020 SVRs share the SAJDZ1FE/SAJDZ5FE prefix (10th char L). Check that the 10th char is J/K, not just the prefix.

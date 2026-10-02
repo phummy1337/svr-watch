@@ -6,9 +6,10 @@
    "city": "Phoenix",
    "color": "Blue",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 16000,
-   "notes": "KBB private; 134 days on site; price unchanged",
+   "notes": "KBB all/2019/private feeds; price unchanged",
    "price": 79000,
    "priceHistory": [
     {
@@ -37,10 +38,10 @@
    "city": "Houston",
    "color": "White",
    "firstSeen": "2026-09-30",
-   "flag": "Salvage history: IAAI lot 39420400 sold 2024-06-25, L/R side damage, $15,825 at 37,641 mi (bid.cars/bidfax/bidspace)",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 41356,
-   "notes": "CarStory 54995 (20 days available); Autolist/iSeeCars 55194 (fee-incl.); not on KBB; price unchanged",
+   "notes": "CarStory 21 days, 4011 Jeanetta St; also Autolist/iSeeCars ($55,194 w/ fees), CarEdge; price unchanged",
    "price": 54995,
    "priceHistory": [
     {
@@ -81,9 +82,10 @@
    "city": "Roswell",
    "color": "Gray",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 9979,
-   "notes": "KBB 7 days on site; also CarStory/Autolist/iSeeCars at 70757; price unchanged",
+   "notes": "KBB/Autolist/CarStory/iSeeCars; price unchanged",
    "price": 70757,
    "priceHistory": [
     {
@@ -125,9 +127,9 @@
    "color": "Corris Grey Metallic",
    "firstSeen": "2026-09-30",
    "flag": "vin_resolved",
-   "lastSeen": "2026-10-01",
+   "lastSeen": "2026-10-02",
    "miles": 70291,
-   "notes": "Re-check: eBay item still in the search index at $52,988 with a clean title (iSeeCars snippet shows $52,990). VIN now resolved from the eBay snippet. The VIN search found no salvage or auction history. CarEdge has no record and it is not on the first iSeeCars Miami page, so liveness is from the search index only (eBay 403s). | Conflicting: still in eBay index, but absent from CarEdge/KBB/iSeeCars/CarStory/Autolist on 10/01.",
+   "notes": "eBay item page 403 (curl, mobile, WebFetch); WebSearch has no index hit for item/VIN; classic.com 2019 SVR market still lists a Miami FL car at $52,990 (liveness hint only); Ferco site inventory is JS-rendered. No evidence of sale.",
    "price": 52988,
    "priceHistory": [
     {
@@ -156,9 +158,10 @@
    "city": "Tampa",
    "color": "Glacier White Metallic",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 66385,
-   "notes": "PRICE DROP 58590 -> 57990 on iSeeCars JSON-LD (InStock); CarEdge still shows stale 58590; Carvana blocked",
+   "notes": "iSeeCars JSON-LD + CarEdge; price unchanged",
    "price": 57990,
    "priceHistory": [
     {
@@ -195,9 +198,10 @@
    "city": "Knoxville",
    "color": "Blue",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 18003,
-   "notes": "Carfax helix + CarStory (29 days) + Autolist at 68994; iSeeCars 68997; price unchanged",
+   "notes": "Carfax helix + Autolist + CarStory (31 days) + iSeeCars ($68,997) + CarEdge; price unchanged",
    "price": 68994,
    "priceHistory": [
     {
@@ -236,11 +240,12 @@
    "_id": "SAJWJ6J85HMK39046",
    "body": "Coupe",
    "city": "Downey",
-   "color": "Rhodium Silver Metallic",
+   "color": "Silver",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 25697,
-   "notes": "KBB daysOnSite 1549 (stale ad); also Autolist/iSeeCars; price unchanged",
+   "notes": "KBB/Autolist/iSeeCars/CarEdge; price unchanged",
    "price": 69999,
    "priceHistory": [
     {
@@ -269,9 +274,10 @@
    "city": "Aldie",
    "color": "Blue",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 35800,
-   "notes": "KBB private; 164 days on site; price unchanged",
+   "notes": "KBB all/2017/private feeds; price unchanged",
    "price": 64960,
    "priceHistory": [
     {
@@ -300,9 +306,10 @@
    "city": "Ewing",
    "color": "White",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 12994,
-   "notes": "KBB 66995 (90 days); CarStory now also 66995 (was 67790, 214 days); Carfax/Autolist/iSeeCars still 67790; price unchanged vs yesterday KBB",
+   "notes": "KBB $66,995; Autolist/CarStory/Carfax/iSeeCars show $67,790 (215 days on CarStory); KBB price unchanged",
    "price": 66995,
    "priceHistory": [
     {
@@ -339,9 +346,10 @@
    "city": "Northbrook",
    "color": "Black",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 33100,
-   "notes": "KBB 58 days; CarStory 62980; Autolist/iSeeCars 63357 (fee-incl.; Autolist names seller Genesis of Glenview); price unchanged",
+   "notes": "KBB/CarStory/Autolist (listed under Genesis of Glenview, $63,392)/iSeeCars; price unchanged",
    "price": 62980,
    "priceHistory": [
     {
@@ -372,11 +380,12 @@
    "_id": "SAJWJ6K83HMK45989",
    "body": "Convertible",
    "city": "Grand Prairie",
-   "color": "Unknown",
+   "color": "Ultra Blue Metallic / Siena Tan",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 52200,
-   "notes": "Only CarEdge (stale-prone, photos 2024-07) still shows 45500; absent from KBB/Autolist/Carfax/CarStory/iSeeCars",
+   "notes": "Only CarEdge still shows it ($45,500); CarEdge known stale for this car; not in any primary feed",
    "price": 45500,
    "priceHistory": [
     {
@@ -411,11 +420,11 @@
    "_id": "SAJWJ6K88HMK43381",
    "body": "Convertible",
    "city": "Los Angeles",
-   "color": "Unknown",
+   "color": "Silver",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "lastSeen": "2026-10-02",
    "miles": 28000,
-   "notes": "Private cars.com-only listing; cars.com 403; CarEdge Not Found (normal for privates); VIN WebSearch shows only cars.com SRPs",
+   "notes": "cars.com 403 again 2026-10-02; VIN WebSearch returns nothing; private, not on KBB/caredge/craigslist; no evidence either way",
    "price": 62900,
    "priceHistory": [
     {
@@ -425,10 +434,10 @@
    ],
    "seller": "Farbod (private)",
    "seller_type": "private",
-   "source": "Cars.com",
+   "source": "cars.com",
    "sources": [
     {
-     "name": "Cars.com",
+     "name": "cars.com",
      "url": "https://www.cars.com/vehicledetail/b7855062-ed7a-48d0-ae93-369d05b0a696/"
     }
    ],
@@ -444,10 +453,11 @@
    "city": "Novi",
    "color": "White",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-01",
+   "flag": false,
+   "lastSeen": "2026-10-02",
    "miles": 58831,
-   "notes": "KBB 16 days on site; CarStory still 60214; price unchanged",
-   "price": 59900,
+   "notes": "PRICE DROP $59,900 -> $58,900 on KBB (CarStory $59,214, CarEdge $60,214 w/ fees)",
+   "price": 58900,
    "priceHistory": [
     {
      "d": "2026-09-30",
@@ -456,6 +466,10 @@
     {
      "d": "2026-09-30",
      "p": 59900
+    },
+    {
+     "d": "2026-10-02",
+     "p": 58900
     }
    ],
    "seller": "Jaguar Land Rover Novi",
@@ -506,6 +520,34 @@
    "state": "VA",
    "status": "unverified",
    "url": "https://www.carfax.com/Used-2017-Jaguar-F-Type-SVR_x28240",
+   "year": 2017
+  },
+  {
+   "_id": "u-c8ade7feaacc",
+   "city": "Holt",
+   "firstSeen": "2026-10-02",
+   "flag": "Price ~$31k is far below market (~$55-70k) -> likely salvage/rebuilt title or mis-trimmed non-SVR; verify VIN",
+   "lastSeen": "2026-10-02",
+   "notes": "NEW lead 2026-10-02: Westlake listing '2017 Jaguar F-TYPE SVR' $31,300 at Turner Specialty Vehicle (indep., 816-479-4576, turnersv.com). Westlake + turnersv 403/Cloudflare, caredge dealer page 404; no VIN/miles/body obtained. Not on KBB/caredge/iseecars/autolist SVR feeds. Trim from URL slug only - may be mis-trimmed.",
+   "price": 31300,
+   "priceHistory": [
+    {
+     "d": "2026-10-02",
+     "p": 31300
+    }
+   ],
+   "seller": "Turner Specialty Vehicle",
+   "seller_type": "dealer",
+   "source": "westlakefinancial autoloan (via WebSearch)",
+   "sources": [
+    {
+     "name": "westlakefinancial autoloan (via WebSearch)",
+     "url": "https://autoloan.westlakefinancial.com/car/mo/holt/2017-jaguar-ftype-svr/04ffe0de-02d4-4888-209f-08de2e5b18f6"
+    }
+   ],
+   "state": "MO",
+   "status": "unverified",
+   "url": "https://autoloan.westlakefinancial.com/car/mo/holt/2017-jaguar-ftype-svr/04ffe0de-02d4-4888-209f-08de2e5b18f6",
    "year": 2017
   }
  ],
@@ -622,10 +664,10 @@
  ],
  "meta": {
   "_id": "status",
-  "blocked": "CarGurus, Cars.com, Edmunds, eBay, Carvana, Cars & Bids, Collecting Cars, Hemmings, Facebook, classic.com, jaguarforums (new 403)",
+  "blocked": "CarGurus, Cars.com, Edmunds, eBay, Carvana, Cars & Bids, Collecting Cars, Hemmings, Facebook, classic.com, jaguarforums, Westlake Financial, turnersv.com, porsche.com dealer pages (429)",
   "firstRun": "2026-09-30",
-  "lastRun": "2026-10-01",
-  "sourcesChecked": 45,
-  "summary": "No new SVRs today; 14 listings still tracked (11 confirmed, 3 unverified). Carvana Tampa 2017 coupe dropped $600 to $57,990. The Miami 2019 convertible (VIN SAJDZ5FE9KCK61153) and the Carvana Richmond 2017 coupe are missing from most feeds and look sold."
+  "lastRun": "2026-10-02",
+  "sourcesChecked": 48,
+  "summary": "No new VIN'd SVRs today. JLR Novi 2017 convertible dropped $1,000 to $58,900, and there is a new unverified lead: a 2017 'SVR' at $31,300 at Turner Specialty Vehicle in Holt MO (no VIN; the price suggests salvage or a mislabeled car). Nothing confirmed gone; the Miami and Carvana Richmond cars are still missing from most feeds."
  }
 }
