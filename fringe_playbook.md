@@ -44,3 +44,9 @@ CarGurus, Cars.com, Carfax, TrueCar, Carvana, JD Power, CarsDirect, carsforsale.
 - WORKS: carsforsale.com vehicle pages load via WebFetch even though curl 403s.
 - BLOCKED: Westlake Financial dealer listings, turnersv.com (403), porsche.com dealer pages (429).
 - Gotcha: 2020 SVRs share the SAJDZ1FE/SAJDZ5FE prefix (10th char L). Check that the 10th char is J/K, not just the prefix.
+
+## Added 2026-10-03
+- WORKS: Carfax helix API with a single zip=66044&radius=3000 query (pages 1-10) returns all ~237 U.S. F-Type listings, replacing the 10-zip loop.
+- WORKS: turnersv.com pages load through WebFetch and its sitemap through curl (the Holt MO "SVR" lead isn't in its inventory). fercomotors.com curls fine (no Jaguar in stock). duPont Registry listing pages show sold status and the sale date.
+- BLOCKED: indulgencemotors.com (curl and WebFetch), ultimomotors.com (curl), and WebFetch now refuses cars.com outright.
+- Check: data.json has the C&B SAJWJ6J89HMK43732 comp as sold for $77,000 (2026-09-28), but a search snippet says $54,000. Verify by hand.

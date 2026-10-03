@@ -7,9 +7,9 @@
    "color": "Blue",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 16000,
-   "notes": "KBB all/2019/private feeds; price unchanged",
+   "notes": "KBB VDP 200, daysOnSite 136; KBB all/2019/private SRPs; price unchanged",
    "price": 79000,
    "priceHistory": [
     {
@@ -38,10 +38,10 @@
    "city": "Houston",
    "color": "White",
    "firstSeen": "2026-09-30",
-   "flag": false,
-   "lastSeen": "2026-10-02",
+   "flag": "Salvage history: IAAI lot 39420400 sold 2024-06-25, L/R side damage, $15,825 at 37,641 mi (bid.cars/bidfax/bidspace)",
+   "lastSeen": "2026-10-03",
    "miles": 41356,
-   "notes": "CarStory 21 days, 4011 Jeanetta St; also Autolist/iSeeCars ($55,194 w/ fees), CarEdge; price unchanged",
+   "notes": "CarStory 22 days (4011 Jeanetta St); Autolist/iSeeCars $55,194 w/ fees; CarEdge $54,995; price unchanged",
    "price": 54995,
    "priceHistory": [
     {
@@ -83,9 +83,9 @@
    "color": "Gray",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 9979,
-   "notes": "KBB/Autolist/CarStory/iSeeCars; price unchanged",
+   "notes": "KBB VDP 200 (9 days); Autolist/CarStory/iSeeCars; CarEdge $69,999; price unchanged",
    "price": 70757,
    "priceHistory": [
     {
@@ -159,9 +159,9 @@
    "color": "Glacier White Metallic",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 66385,
-   "notes": "iSeeCars JSON-LD + CarEdge; price unchanged",
+   "notes": "iSeeCars JSON-LD + CarEdge $57,990; price unchanged",
    "price": 57990,
    "priceHistory": [
     {
@@ -199,9 +199,9 @@
    "color": "Blue",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
-   "miles": 18003,
-   "notes": "Carfax helix + Autolist + CarStory (31 days) + iSeeCars ($68,997) + CarEdge; price unchanged",
+   "lastSeen": "2026-10-03",
+   "miles": 18029,
+   "notes": "Carfax helix (nationwide) + CarStory (30 days) + iSeeCars + CarEdge; not on Autolist today; miles now 18,029 (was 18,003); price unchanged",
    "price": 68994,
    "priceHistory": [
     {
@@ -243,9 +243,9 @@
    "color": "Silver",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 25697,
-   "notes": "KBB/Autolist/iSeeCars/CarEdge; price unchanged",
+   "notes": "KBB VDP 200 (daysOnSite 1551); Autolist/iSeeCars/CarEdge; price unchanged",
    "price": 69999,
    "priceHistory": [
     {
@@ -275,9 +275,9 @@
    "color": "Blue",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 35800,
-   "notes": "KBB all/2017/private feeds; price unchanged",
+   "notes": "KBB VDP 200 (daysOnSite 166); KBB private SRP; price unchanged",
    "price": 64960,
    "priceHistory": [
     {
@@ -307,9 +307,9 @@
    "color": "White",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 12994,
-   "notes": "KBB $66,995; Autolist/CarStory/Carfax/iSeeCars show $67,790 (215 days on CarStory); KBB price unchanged",
+   "notes": "KBB VDP $66,995 (92 days); Autolist/CarStory/Carfax/iSeeCars/CarEdge $67,790; price unchanged",
    "price": 66995,
    "priceHistory": [
     {
@@ -347,9 +347,9 @@
    "color": "Black",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 33100,
-   "notes": "KBB/CarStory/Autolist (listed under Genesis of Glenview, $63,392)/iSeeCars; price unchanged",
+   "notes": "KBB VDP 200 (60 days); CarStory/CarEdge $62,980; Autolist as Genesis of Glenview $63,392; price unchanged",
    "price": 62980,
    "priceHistory": [
     {
@@ -383,9 +383,9 @@
    "color": "Ultra Blue Metallic / Siena Tan",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 52200,
-   "notes": "Only CarEdge still shows it ($45,500); CarEdge known stale for this car; not in any primary feed",
+   "notes": "Only CarEdge still shows it ($45,500; known stale, 2024 photos); absent from KBB/Autolist/CarStory/iSeeCars/Carfax",
    "price": 45500,
    "priceHistory": [
     {
@@ -422,9 +422,9 @@
    "city": "Los Angeles",
    "color": "Silver",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 28000,
-   "notes": "cars.com 403 again 2026-10-02; VIN WebSearch returns nothing; private, not on KBB/caredge/craigslist; no evidence either way",
+   "notes": "cars.com blocked (403 curl, WebFetch refuses domain) 2026-10-03; VIN WebSearch nothing; caredge no listing; no evidence either way",
    "price": 62900,
    "priceHistory": [
     {
@@ -454,10 +454,10 @@
    "color": "White",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-02",
+   "lastSeen": "2026-10-03",
    "miles": 58831,
-   "notes": "PRICE DROP $59,900 -> $58,900 on KBB (CarStory $59,214, CarEdge $60,214 w/ fees)",
-   "price": 58900,
+   "notes": "PRICE DROP $58,900 -> $57,900 on KBB VDP (18 days); iSeeCars still $58,900, CarStory $58,214, CarEdge $60,214 w/ fees",
+   "price": 57900,
    "priceHistory": [
     {
      "d": "2026-09-30",
@@ -470,6 +470,10 @@
     {
      "d": "2026-10-02",
      "p": 58900
+    },
+    {
+     "d": "2026-10-03",
+     "p": 57900
     }
    ],
    "seller": "Jaguar Land Rover Novi",
@@ -498,9 +502,9 @@
    "color": "Glacier White Metallic",
    "firstSeen": "2026-09-30",
    "flag": "location_corrected",
-   "lastSeen": "2026-10-01",
+   "lastSeen": "2026-10-03",
    "miles": 29458,
-   "notes": "This is the 'Atlanta unverified' 2017 coupe. Search snippets match the same 29,458 mi / $66,590 to a Carvana listing ('in-stock online, delivery', 3 owners, no accidents) located in Richmond VA, not Atlanta. VIN still unknown; Carvana 403s.",
+   "notes": "2026-10-03: WebSearch (carvana.com) still indexes a 2017 F-TYPE SVR 29,458 mi $66,590 on carvana.com/cars/jaguar-f-type-svr; Carvana 403 to curl + WebFetch; not in Carfax helix nationwide today; VIN still unknown",
    "price": 66590,
    "priceHistory": [
     {
@@ -510,10 +514,10 @@
    ],
    "seller": "Carvana (Richmond)",
    "seller_type": "dealer",
-   "source": "Carvana (via Carfax/Edmunds snippets)",
+   "source": "Carvana (via WebSearch index)",
    "sources": [
     {
-     "name": "Carvana (via Carfax/Edmunds snippets)",
+     "name": "Carvana (via WebSearch index)",
      "url": "https://www.carfax.com/Used-2017-Jaguar-F-Type-SVR_x28240"
     }
    ],
@@ -664,10 +668,10 @@
  ],
  "meta": {
   "_id": "status",
-  "blocked": "CarGurus, Cars.com, Edmunds, eBay, Carvana, Cars & Bids, Collecting Cars, Hemmings, Facebook, classic.com, jaguarforums, Westlake Financial, turnersv.com, porsche.com dealer pages (429)",
+  "blocked": "CarGurus, Cars.com, Edmunds, eBay, Carvana, Cars & Bids, Collecting Cars, Hemmings, Facebook, classic.com, jaguarforums, Westlake Financial, indulgencemotors.com, ultimomotors.com, porsche.com dealer pages (429)",
   "firstRun": "2026-09-30",
-  "lastRun": "2026-10-02",
-  "sourcesChecked": 48,
-  "summary": "No new VIN'd SVRs today. JLR Novi 2017 convertible dropped $1,000 to $58,900, and there is a new unverified lead: a 2017 'SVR' at $31,300 at Turner Specialty Vehicle in Holt MO (no VIN; the price suggests salvage or a mislabeled car). Nothing confirmed gone; the Miami and Carvana Richmond cars are still missing from most feeds."
+  "lastRun": "2026-10-03",
+  "sourcesChecked": 50,
+  "summary": "No new SVRs today. The JLR Novi 2017 convertible dropped another $1,000 to $57,900. Ferco Miami (its dealer site has no Jaguar) and the Turner Holt MO lead (not in its inventory) look sold, and the Carvana Richmond coupe has left Carfax; all three will be marked gone if they stay missing."
  }
 }
