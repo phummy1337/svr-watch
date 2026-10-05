@@ -55,3 +55,10 @@ CarGurus, Cars.com, Carfax, TrueCar, Carvana, JD Power, CarsDirect, carsforsale.
 - WORKS: houstonautoworld.com sitemap + VDPs curl fine (confirms the Houston 2019 live). Hagerty Marketplace has ~1,218 lots / 40 pages; page through all of them (10 pages was only a quarter). Ferco sitemap + constructed VDP URL (404 vs 200 control) is a clean gone-check.
 - BLOCKED: ournextcar.com (403), buffalo.porsche.com, AutoRevo eBrochure links (now redirect to marketing page).
 - Comp check: C&B KmAb76BY (SAJWJ6J89HMK43732) $77,000 sold on 9/28 is backed by 3 search snippets; the "$54,000" was lot 9A6Ma0AJ (SAJWJ6J88HMK43981, sold 2024-03-19). Kept $77k (medium confidence; lot page itself 403s).
+
+## Added 2026-10-05
+- BLOCKED: KBB/Autotrader now 403 (Akamai "Access Denied") to curl for every UA, on search pages, VDPs and the Autotrader /rest/lsc API. WebFetch still reads KBB search pages and VDPs (prices and listing ids, but no VINs on search pages and no daysOnSite). Sold VDPs say "already found a new home". May be transient; retry curl tomorrow.
+- Carfax helix: adding yearMin/yearMax cuts the results to ~73; query make=Jaguar&model=F-Type only (229 today) and filter by VIN regex.
+- Autolist is fed by CarGurus and shows new dealer cars within ~1 day, so it's the best early signal (it caught the Fort Myers 2017 conv SAJWJ6K86HMK46151 on 10-04).
+- C&B: a carsandbids.com-only WebSearch for "<lotId> <title words>" returns the sold price, bid count and end date for older lots. Closed lots with no confirmed final price yet: rxRZxMe8, KP4qAn2a, KVyQdjLl, r4YM7XqA. r4YM7XqA (2017 coupe, ~7.1k mi, ended 2026-01-15) is probably the existing $60,777 not-sold comp that is labeled 2019. Check the year by hand.
+- BLOCKED/dead: Mecum search (JS shell with no lot data), Barrett-Jackson /search and AutoHunter /Listing (404), collectingcars.com and hemmings.com (403).

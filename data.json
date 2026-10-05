@@ -7,9 +7,9 @@
    "color": "Blue",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 16000,
-   "notes": "KBB VDP 200, daysOnSite 137; in KBB all/2019/private SRPs; price unchanged $79,000",
+   "notes": "KBB VDP live via WebFetch (curl 403 today) + KBB all/private SRPs $79,000; price unchanged. CarEdge no-listing page (normal for this car)",
    "price": 79000,
    "priceHistory": [
     {
@@ -39,9 +39,9 @@
    "color": "White",
    "firstSeen": "2026-09-30",
    "flag": "Salvage history: IAAI lot 39420400 sold 2024-06-25, L/R side damage, $15,825 at 37,641 mi (bid.cars/bidfax/bidspace)",
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 41356,
-   "notes": "CarStory 23 days $54,995; Autolist/iSeeCars $55,194 w/ fees; CarEdge $54,995; price unchanged",
+   "notes": "CarStory 24 days $54,995; Autolist/iSeeCars $55,194 w/ fees; CarEdge $54,995; price unchanged",
    "price": 54995,
    "priceHistory": [
     {
@@ -87,9 +87,9 @@
    "color": "Gray",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 9979,
-   "notes": "KBB VDP 200, daysOnSite 10; Autolist/CarStory(10d)/iSeeCars $70,757; CarEdge $69,999; price unchanged",
+   "notes": "KBB SRP $70,757 (WebFetch); Autolist/CarStory(11d)/iSeeCars $70,757; CarEdge $69,999; price unchanged",
    "price": 70757,
    "priceHistory": [
     {
@@ -151,7 +151,7 @@
     }
    ],
    "state": "FL",
-   "status": "unverified",
+   "status": "gone",
    "url": "https://www.ebay.com/itm/287429283044",
    "vin": "SAJDZ5FE9KCK61153",
    "year": 2019
@@ -163,7 +163,7 @@
    "color": "Glacier White Metallic",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 66385,
    "notes": "iSeeCars JSON-LD InStock + CarEdge $57,990; price unchanged (not on KBB/Autolist/CarStory/Carfax)",
    "price": 57990,
@@ -203,9 +203,9 @@
    "color": "Blue",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 18029,
-   "notes": "2026-10-04: dropped from Carfax helix + CarStory (both had it 10-03); only iSeeCars/CarEdge still show $68,994; Harper site 403. Possibly sold.",
+   "notes": "2nd day absent from Carfax helix (229 listings) and CarStory; not on Autolist/KBB. Only iSeeCars (18,003 mi) and CarEdge $68,994 still show it. Likely sold; Harper site blocked",
    "price": 68994,
    "priceHistory": [
     {
@@ -247,9 +247,9 @@
    "color": "Silver",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 25697,
-   "notes": "KBB VDP 200, daysOnSite 1552; Autolist/iSeeCars/CarEdge $69,999; price unchanged",
+   "notes": "KBB SRP $69,999 (WebFetch); Autolist/iSeeCars/CarEdge $69,999; price unchanged",
    "price": 69999,
    "priceHistory": [
     {
@@ -279,9 +279,9 @@
    "color": "Blue",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 35800,
-   "notes": "KBB VDP 200, daysOnSite 167; KBB all/2017/private SRPs; price unchanged $64,960",
+   "notes": "KBB VDP live via WebFetch + KBB all/private SRPs $64,960; price unchanged",
    "price": 64960,
    "priceHistory": [
     {
@@ -311,10 +311,10 @@
    "color": "White",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 12994,
-   "notes": "KBB VDP 200, daysOnSite 93 ($66,995); Autolist/CarStory/Carfax helix/iSeeCars/CarEdge $67,790; price unchanged",
-   "price": 66995,
+   "notes": "KBB SRP now $67,790 (was $66,995 on KBB 10-04; +$795, now matches Autolist/CarStory(218d)/Carfax helix/iSeeCars/CarEdge $67,790)",
+   "price": 67790,
    "priceHistory": [
     {
      "d": "2026-09-30",
@@ -323,6 +323,10 @@
     {
      "d": "2026-09-30",
      "p": 66995
+    },
+    {
+     "d": "2026-10-05",
+     "p": 67790
     }
    ],
    "seller": "J & S Autohaus",
@@ -351,9 +355,9 @@
    "color": "Black",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 33100,
-   "notes": "KBB VDP 200, daysOnSite 61; CarStory/CarEdge $62,980; Autolist (Genesis of Glenview) $63,392; price unchanged",
+   "notes": "KBB SRP $62,980 (WebFetch); CarStory(63d)/CarEdge $62,980; Autolist (Genesis of Glenview) $63,392; price unchanged",
    "price": 62980,
    "priceHistory": [
     {
@@ -387,7 +391,7 @@
    "color": "Ultra Blue Metallic / Siena Tan",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 52200,
    "notes": "Only CarEdge still shows it ($45,500; known stale, 2024 photos); absent from KBB/Autolist/CarStory/iSeeCars/Carfax",
    "price": 45500,
@@ -421,14 +425,51 @@
    "year": 2017
   },
   {
+   "_id": "SAJWJ6K86HMK46151",
+   "body": "Convertible",
+   "city": "Fort Myers",
+   "color": "Ammonite Gray Metallic",
+   "firstSeen": "2026-10-05",
+   "flag": false,
+   "lastSeen": "2026-10-05",
+   "miles": 24551,
+   "notes": "NEW. 10040 Daniels Interstate Ct, Fort Myers FL 33913. Carfax helix $65,900; KBB VDP 792790668 $67,394 (incl $1,494 dealer fees); CarStory $67,398 (2 days on site); Autolist $66,889. CarEdge no page yet. VIN searches: no salvage/auction history found",
+   "price": 65900,
+   "priceHistory": [
+    {
+     "d": "2026-10-05",
+     "p": 65900
+    }
+   ],
+   "seller": "Porsche Fort Myers",
+   "seller_type": "dealer",
+   "source": "Carfax",
+   "sources": [
+    {
+     "name": "Carfax",
+     "url": "https://www.kbb.com/cars-for-sale/vehicle/792790668"
+    },
+    {
+     "name": "Carfax helix / Autolist / CarStory",
+     "url": "https://www.carfax.com/vehicle/SAJWJ6K86HMK46151"
+    }
+   ],
+   "state": "FL",
+   "status": "active",
+   "url": "https://www.kbb.com/cars-for-sale/vehicle/792790668",
+   "vin": "SAJWJ6K86HMK46151",
+   "year": 2017
+  },
+  {
    "_id": "SAJWJ6K88HMK43381",
    "body": "Convertible",
    "city": "Los Angeles",
    "color": "Silver",
    "firstSeen": "2026-09-30",
-   "lastSeen": "2026-10-03",
+   "flag": false,
+   "lastSeen": "2026-10-05",
    "miles": 28000,
-   "notes": "cars.com blocked (403 curl, WebFetch refuses domain) 2026-10-03; VIN WebSearch nothing; caredge no listing; no evidence either way",
+   "notes": "2026-10-05: 3rd day unconfirmable; cars.com blocked; VIN WebSearch nothing; CarEdge no listing (small page, no price); absent from all feeds. Candidate to drop",
    "price": 62900,
    "priceHistory": [
     {
@@ -458,10 +499,10 @@
    "color": "White",
    "firstSeen": "2026-09-30",
    "flag": false,
-   "lastSeen": "2026-10-04",
+   "lastSeen": "2026-10-05",
    "miles": 58831,
-   "notes": "KBB VDP 200, daysOnSite 19, $57,900 (unchanged since 10-03 drop from $58,900); CarStory $58,214; CarEdge $59,214 w/ fees (was $60,214); iSeeCars still $58,900",
-   "price": 57900,
+   "notes": "KBB SRP now $58,214 (was $57,900; +$314, matches CarStory(18d)/CarEdge $58,214); iSeeCars $57,900",
+   "price": 58214,
    "priceHistory": [
     {
      "d": "2026-09-30",
@@ -478,6 +519,10 @@
     {
      "d": "2026-10-03",
      "p": 57900
+    },
+    {
+     "d": "2026-10-05",
+     "p": 58214
     }
    ],
    "seller": "Jaguar Land Rover Novi",
@@ -506,9 +551,9 @@
    "color": "Glacier White Metallic",
    "firstSeen": "2026-09-30",
    "flag": "location_corrected",
-   "lastSeen": "2026-10-03",
+   "lastSeen": "2026-10-05",
    "miles": 29458,
-   "notes": "2026-10-03: WebSearch (carvana.com) still indexes a 2017 F-TYPE SVR 29,458 mi $66,590 on carvana.com/cars/jaguar-f-type-svr; Carvana 403 to curl + WebFetch; not in Carfax helix nationwide today; VIN still unknown",
+   "notes": "2026-10-05: carvana.com-scoped WebSearch again reports a 2017 F-TYPE SVR with 29,458 mi at $66,590 (index snippet); carvana.com 403 to curl; VIN still unknown; not in Carfax helix",
    "price": 66590,
    "priceHistory": [
     {
@@ -554,7 +599,7 @@
     }
    ],
    "state": "MO",
-   "status": "unverified",
+   "status": "gone",
    "url": "https://autoloan.westlakefinancial.com/car/mo/holt/2017-jaguar-ftype-svr/04ffe0de-02d4-4888-209f-08de2e5b18f6",
    "year": 2017
   }
@@ -597,6 +642,18 @@
    "year": 2018
   },
   {
+   "_id": "c-7dd260d9b807",
+   "body": "Coupe",
+   "date": "2023-07-07",
+   "miles": 44500,
+   "note": "Sold for $59,588. VIN SAJWJ6J84HMK42942, Ultimate Black, mostly Southern/Western-owned. Historical backfill (search snippets).",
+   "price": 59588,
+   "sold": true,
+   "source": "Cars & Bids",
+   "url": "https://carsandbids.com/auctions/rblPN1yd/2017-jaguar-f-type-svr",
+   "year": 2017
+  },
+  {
    "_id": "c-984a252121be",
    "body": null,
    "date": "2026-01-15",
@@ -618,6 +675,18 @@
    "sold": false,
    "source": "Bring a Trailer",
    "url": "https://bringatrailer.com/listing/2017-jaguar-f-type-svr-convertible-4/",
+   "year": 2017
+  },
+  {
+   "_id": "c-adfcc401c907",
+   "body": "Coupe",
+   "date": "2024-03-19",
+   "miles": 29000,
+   "note": "Sold for $54,000. VIN SAJWJ6J88HMK43981, mostly unmodified. Historical backfill (search snippets 10/04 + 10/05).",
+   "price": 54000,
+   "sold": true,
+   "source": "Cars & Bids",
+   "url": "https://carsandbids.com/auctions/9A6Ma0AJ/2017-jaguar-f-type-svr-coupe",
    "year": 2017
   },
   {
@@ -646,6 +715,19 @@
    "year": 2017
   },
   {
+   "_id": "c-d86fccfc34ef",
+   "bids": 16,
+   "body": "Convertible",
+   "date": "2023-08-22",
+   "miles": 12400,
+   "note": "Sold for $76,000, 16 bids. VIN SAJDZ5FE1KCK58909, white w/ black top, unmodified, clean Carfax. Historical backfill (C&B lot via search snippet; lot page 403s).",
+   "price": 76000,
+   "sold": true,
+   "source": "Cars & Bids",
+   "url": "https://carsandbids.com/auctions/3g5pR65b/2019-jaguar-f-type-svr-convertible",
+   "year": 2019
+  },
+  {
    "_id": "c-d9ed9e4f8690",
    "body": "Coupe",
    "date": "2025-04-22",
@@ -655,6 +737,19 @@
    "sold": false,
    "source": "Bring a Trailer",
    "url": "https://bringatrailer.com/listing/2017-jaguar-f-type-svr-coupe-9/",
+   "year": 2017
+  },
+  {
+   "_id": "c-ded20efe9199",
+   "bids": 18,
+   "body": "Coupe",
+   "date": "2024-09-13",
+   "miles": 52200,
+   "note": "Sold for $39,750, 18 bids. Rhodium Silver/red, Maryland title, extensively modified (Stage 1 tune, downpipes, coilovers, BBK), intermittent airbag light. Historical backfill (search snippet).",
+   "price": 39750,
+   "sold": true,
+   "source": "Cars & Bids",
+   "url": "https://carsandbids.com/auctions/9WnRGwGB/2017-jaguar-f-type-svr-coupe",
    "year": 2017
   },
   {
@@ -672,10 +767,10 @@
  ],
  "meta": {
   "_id": "status",
-  "blocked": "CarGurus, Cars.com, Edmunds, eBay, Carvana, Cars & Bids, Collecting Cars, Hemmings, Facebook, classic.com, jaguarforums, Westlake Financial, indulgencemotors.com, ultimomotors.com, ournextcar.com, Harper Jaguar, porsche.com dealer pages",
+  "blocked": "CarGurus, Cars.com, Edmunds, eBay, Carvana, Cars & Bids, Collecting Cars, Hemmings, Facebook, classic.com, jaguarforums, Westlake Financial, indulgencemotors.com, ultimomotors.com, ournextcar.com, Harper Jaguar, porsche.com dealer pages, KBB/Autotrader (curl 403; WebFetch still works)",
   "firstRun": "2026-09-30",
-  "lastRun": "2026-10-04",
-  "sourcesChecked": 52,
-  "summary": "No new SVRs and no price changes today. Harper Knoxville's 2017 coupe dropped off Carfax and CarStory, so it may have sold. Ferco Miami, Turner Holt MO, Carvana Richmond and the private LA convertible weren't found anywhere and will be marked gone if they stay missing."
+  "lastRun": "2026-10-05",
+  "sourcesChecked": 54,
+  "summary": "New today: a 2017 SVR convertible (Ammonite Gray, 24.6k mi) at Porsche Fort Myers FL for $65,900. Small price bumps on the Ewing NJ coupe ($67,790) and Novi MI convertible ($58,214). Ferco Miami's 2019 convertible and the Turner Holt MO lead are gone."
  }
 }
