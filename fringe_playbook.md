@@ -50,3 +50,8 @@ CarGurus, Cars.com, Carfax, TrueCar, Carvana, JD Power, CarsDirect, carsforsale.
 - WORKS: turnersv.com pages load through WebFetch and its sitemap through curl (the Holt MO "SVR" lead isn't in its inventory). fercomotors.com curls fine (no Jaguar in stock). duPont Registry listing pages show sold status and the sale date.
 - BLOCKED: indulgencemotors.com (curl and WebFetch), ultimomotors.com (curl), and WebFetch now refuses cars.com outright.
 - Check: data.json has the C&B SAJWJ6J89HMK43732 comp as sold for $77,000 (2026-09-28), but a search snippet says $54,000. Verify by hand.
+
+## Added 2026-10-04
+- WORKS: houstonautoworld.com sitemap + VDPs curl fine (confirms the Houston 2019 live). Hagerty Marketplace has ~1,218 lots / 40 pages; page through all of them (10 pages was only a quarter). Ferco sitemap + constructed VDP URL (404 vs 200 control) is a clean gone-check.
+- BLOCKED: ournextcar.com (403), buffalo.porsche.com, AutoRevo eBrochure links (now redirect to marketing page).
+- Comp check: C&B KmAb76BY (SAJWJ6J89HMK43732) $77,000 sold on 9/28 is backed by 3 search snippets; the "$54,000" was lot 9A6Ma0AJ (SAJWJ6J88HMK43981, sold 2024-03-19). Kept $77k (medium confidence; lot page itself 403s).
