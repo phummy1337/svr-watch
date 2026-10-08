@@ -62,3 +62,9 @@ CarGurus, Cars.com, Carfax, TrueCar, Carvana, JD Power, CarsDirect, carsforsale.
 - Autolist is fed by CarGurus and shows new dealer cars within ~1 day, so it's the best early signal (it caught the Fort Myers 2017 conv SAJWJ6K86HMK46151 on 10-04).
 - C&B: a carsandbids.com-only WebSearch for "<lotId> <title words>" returns the sold price, bid count and end date for older lots. Closed lots with no confirmed final price yet: rxRZxMe8, KP4qAn2a, KVyQdjLl, r4YM7XqA. r4YM7XqA (2017 coupe, ~7.1k mi, ended 2026-01-15) is probably the existing $60,777 not-sold comp that is labeled 2019. Check the year by hand.
 - BLOCKED/dead: Mecum search (JS shell with no lot data), Barrett-Jackson /search and AutoHunter /Listing (404), collectingcars.com and hemmings.com (403).
+
+## Added 2026-10-08
+- BLOCKED: carvana.com and carandclassic.com (403 to WebFetch). KBB curl still 403 (3rd day); WebFetch still works.
+- Comp fix: C&B r4YM7XqA is a 2017 coupe (~7.1k mi), not 2019; updated comp c-984a252121be. New comp rxRZxMe8 (2017 conv, 18.2k mi) sold $57,117 on 2025-11-04. KP4qAn2a and KVyQdjLl still have no final price.
+- Carfax helix now ~262 F-Types over 11 pages. Hagerty ~1,257 lots / 38 pages. Capital One "SVR" hits are all F-Pace SVRs.
+- Watch: a 2020 SVR conv at Lone Tree CO ($67,850) shows up in KBB SVR results (excluded, 2020). iSeeCars snippet shows the Phoenix 2019 (SAJDZ1FE0KCK62491) at $74,998 as "Tucson"; unconfirmed vs KBB's $79,000.
